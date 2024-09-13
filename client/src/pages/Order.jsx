@@ -4,6 +4,8 @@ import { storeContext } from "../context/storeContext";
 const Cart = () => {
   const { getTotalCartAmount } = useContext(storeContext);
 
+  const ORDER = "https://fooddeliveryapp-2cmx.onrender.com/order"
+
   const paymentHandler = async (event) => {
     event.preventDefault();
 
@@ -12,7 +14,7 @@ const Cart = () => {
     const receiptId = "1234567890";
 
     try {
-      const response = await fetch("http://localhost:2000/order", {
+      const response = await fetch(ORDER, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
