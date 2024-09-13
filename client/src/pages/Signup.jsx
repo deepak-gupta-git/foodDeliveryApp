@@ -14,7 +14,7 @@ const Signup = () => {
 
 const {storeTokenInLS} = useAuth();
 
-const userURL = "http://localhost:2000/api/auth/signup";
+const userURL = "https://fooddeliveryapp-2cmx.onrender.com/api/auth/signup";
 
 const handleInput = (e) =>{
     console.log(e);
