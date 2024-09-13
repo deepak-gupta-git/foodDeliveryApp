@@ -12,7 +12,7 @@ const Login = () => {
 
   const {storeTokenInLS} = useAuth();
 
-  const LOGINURL = "http://localhost:2000/api/auth/login"
+  const LOGINURL = "https://fooddeliveryapp-2cmx.onrender.com"
   
 
   const handleInput = (e) => {
