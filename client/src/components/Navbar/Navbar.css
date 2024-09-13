@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #fe424d; */
+    font-family: Outfit;
+}
+
+
+.nav{
+    background-color:white ;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+   
+}
+
+.logo_sections{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    /* color: #fe424d; */
+    /* line-height: 80px; */
+    /* font-size: 1.5rem; */
+    margin: 0 20px;
+}
+
+
+.form-input{
+    height: 2.2rem;
+    border-radius: 2rem;
+    width: 15rem;
+    padding: 15px;
+    border: 0.5px solid rgb(199, 195, 195);
+  }
+  .form-btn{
+    height: 2.2rem;
+    border-radius: 2rem;
+    padding: 5px;
+    width: 6rem;
+    background-color: transparent;
+    border:1px solid #49557e;
+  }
+
+  .form-btn:hover {
+    background-color: tomato;
+    color: #fff;
+  }
+
+
+
+ul{
+    /* color: white; */
+    float: right;
+    /* margin-right: 20px; */
+    /* margin: 0 100px; */
+}
+
+.wander{
+    font-weight: 400;
+    font-size: medium;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+ul li:hover{
+    transition: all .3s;
+ }
+
+.checkbtn{
+    color: tomato;
+    font-size: 1.7rem;
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width : 860px) {
+    .logo{
+       display: none;
+        /* padding: 0 60px; */
+    }
+}
+
+@media(max-width : 750px) {
+    .checkbtn{
+        display: block;
+        margin-left: 10px;
+    }
+
+    ul{
+        position: fixed;
+        background-color:tomato;
+        width: 50%;
+        /* width: 50%; */
+        height: 50vh;
+        transition: all .5s;
+        left: -100%;
+        /* align-items: center; */
+        top: 80px;
+        text-align: center;
+    }
+
+    ul li {
+        display:block;
+        line-height: 60px;
+        /* margin: 50px 0px; */
+        color: white;
+    }
+
+    ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* a:hover,a.active{
+        font-size: 30px;
+    } */
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+    
+}
