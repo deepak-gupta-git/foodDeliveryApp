@@ -12,7 +12,7 @@ const Login = () => {
 
   const {storeTokenInLS} = useAuth();
 
-  const LOGINURL = "https://fooddeliveryapp-2cmx.onrender.com/api/auth/signup"
+  const LOGINURL = "https://food-delivery-app-xi-rust.vercel.app/api/auth/signup"
   
 
   const handleInput = (e) => {
