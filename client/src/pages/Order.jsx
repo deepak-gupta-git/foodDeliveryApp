@@ -4,7 +4,7 @@ import { storeContext } from "../context/storeContext";
 const Cart = () => {
   const { getTotalCartAmount } = useContext(storeContext);
 
-  const ORDER = "https://fooddeliveryapp-2cmx.onrender.com/order"
+  const ORDER = "https://food-delivery-app-xi-rust.vercel.app/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();
