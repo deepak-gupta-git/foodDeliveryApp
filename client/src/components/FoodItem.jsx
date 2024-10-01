@@ -1,6 +1,6 @@
 import React, { useContext} from 'react';
 import { assets } from "../assets/assets";
-import { storeContext } from '../context/storeContext';
+import { storeContext } from '../context/StoreContext';
 import { useState } from 'react';
 
 const FoodItem = ({ id, name, price, description, image }) => {
