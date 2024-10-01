@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { food_list } from '../assets/assets';
-import { storeContext } from '../context/storeContext';
+import { storeContext } from '../context/StoreContext';
 import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
