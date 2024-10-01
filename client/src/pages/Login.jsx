@@ -12,7 +12,7 @@ const Login = () => {
 
   const {storeTokenInLS} = useAuth();
 
-  const LOGINURL = "https://food-delivery-app-xi-rust.vercel.app/api/auth/signup"
+  const LOGINURL = "food-delivery-app-tgyc.vercel.app/api/auth/signup"
   
 
   const handleInput = (e) => {
