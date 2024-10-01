@@ -17,6 +17,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
+    "vercel-build": "react-scripts build"
   }
 }
 
