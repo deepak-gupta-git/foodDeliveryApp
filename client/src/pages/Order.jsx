@@ -4,7 +4,7 @@ import { storeContext } from "../context/StoreContext";
 const Cart = () => {
   const { getTotalCartAmount } = useContext(storeContext);
 
-  const ORDER = "food-delivery-app-tgyc.vercel.app/order"
+  const ORDER = "https://food-delivery-app-tgyc.vercel.app/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();
