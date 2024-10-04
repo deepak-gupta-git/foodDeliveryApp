@@ -7,7 +7,7 @@ const cors = require("cors");
 const Razorpay = require("razorpay");
 
 const corsOptions = {
-    origin: ["http://localhost:3000", "https://food-delivery-app-frontend-0.vercel.app"],
+    origin: ["https://food-delivery-app-frontend-0.vercel.app"],
     methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
     credentials: true,
 };
