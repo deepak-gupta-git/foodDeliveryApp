@@ -13,7 +13,6 @@ const Login = () => {
   const {storeTokenInLS} = useAuth();
 
   const LOGINURL = "food-delivery-app-tgyc.vercel.app/api/auth/signup"
-  
 
   const handleInput = (e) => {
     let name = e.target.name;
