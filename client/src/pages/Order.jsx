@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import { storeContext } from "../context/StoreContext";
-import { useAuth } from '../../Store/authStore'
-import { toast } from "react-toastify";
-import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const { isLoggedIn } = useAuth();
@@ -13,7 +10,7 @@ const Cart = () => {
     toast.error("Making Payment You Have to Signup First");
   } 
 
-  const ORDER = "http://localhost:2000/order"
+  const ORDER = "https://food-delivery-app-xi-rust.vercel.app/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();

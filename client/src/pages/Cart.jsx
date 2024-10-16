@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { food_list } from '../assets/assets';
 import { storeContext } from '../context/StoreContext';
-import { NavLink, useNavigate } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
     const { cartItem, addToCart, removeCart, getTotalCartAmount } = useContext(storeContext);

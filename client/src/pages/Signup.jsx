@@ -14,6 +14,7 @@ const Signup = () => {
 
 const {storeTokenInLS} = useAuth();
 
+
 const userURL = "http://localhost:2000/api/auth/signup";
 
 const handleInput = (e) =>{
