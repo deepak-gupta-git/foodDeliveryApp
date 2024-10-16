@@ -1,7 +1,9 @@
 import React, { useContext} from 'react';
 import { assets } from "../assets/assets";
-import { storeContext } from '../context/storeContext';
+import { storeContext } from '../context/StoreContext';
 import { useState } from 'react';
+import { NavLink } from "react-router-dom";
+
 
 const FoodItem = ({ id, name, price, description, image }) => {
 
@@ -23,11 +25,19 @@ const FoodItem = ({ id, name, price, description, image }) => {
       </div>
       <div className="food_item_info">
         <div className="food_item_name_rating flex justify-between items-center mb-2">
-          <p className="text-lg font-semibold">{name}</p>
+        <NavLink 
+        to="/feedback" 
+        state={{ id, name, price, description, image }}
+        replace
+                  >
+        <p className="text-lg font-semibold">{name}</p>
+             </NavLink>
+
+
           <img src={assets.rating_starts} alt="Rating" className=" h-5" />
         </div>
         <p className="text-sm text-gray-700 mb-4">{description}</p>
-        <p className="text-lg font-bold">${price}</p>
+        <p className="text-lg font-bold">₹{price}</p>
       </div>
     </div>
   );

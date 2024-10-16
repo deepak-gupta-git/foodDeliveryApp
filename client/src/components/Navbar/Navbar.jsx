@@ -9,7 +9,7 @@ const Navbar = () => {
   const { isLoggedIn } = useAuth();
 
   const Onclick = async () => {
-    toast.success("Logout succesfull");
+    toast.success("Logout Succesfully");
   } 
   return (
  
@@ -25,6 +25,7 @@ const Navbar = () => {
             <a href="#explore"><li>menu</li></a>
             <a href="#food_display"><li>explore-food</li></a>
             <a href="#footer"><li>contact us</li></a>
+            <NavLink to="/myorders"><a><li>my orders</li></a></NavLink>
           </ul>
 
           <div className='searchBar'> 

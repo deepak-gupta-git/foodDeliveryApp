@@ -10,6 +10,8 @@ import Error from './pages/Error';
 import Order from './pages/Order';
 import {AuthProvider} from "../Store/authStore"
 import { Logout } from './pages/Logout';
+import FeedBack from './components/FeedBack';
+import MyOrders from './components/MyOrders';
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
       <Route path='/*' element={<Error/>}/>
       <Route path='/order' element={<Order/>}/>
       <Route path='/logout' element={<Logout/>}/>
+      <Route path='/feedback' element={<FeedBack/>}/>
+      <Route path='/myorders' element={<MyOrders/>}/>
     </Routes>
     <Footer/>
     </AuthProvider>

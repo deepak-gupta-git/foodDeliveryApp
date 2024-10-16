@@ -1,6 +1,4 @@
 const mongoose = require ("mongoose");
-
-
 const foodSchema = new mongoose.Schema({
     
     name : {
@@ -16,7 +14,6 @@ const foodSchema = new mongoose.Schema({
         type:Number,
         require:true
     },
-
 
     category : {
         type:String,

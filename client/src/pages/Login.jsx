@@ -12,7 +12,7 @@ const Login = () => {
 
   const {storeTokenInLS} = useAuth();
 
-  const LOGINURL = "https://food-delivery-app-xi-rust.vercel.app/api/auth/signup"
+  const LOGINURL = "http://localhost:2000/api/auth/login"
   
 
   const handleInput = (e) => {
@@ -46,7 +46,7 @@ const Login = () => {
         // alert("user Successful");
         // storeTokenInLS(res_data.token);
         setUser({ email: "", password: "" });
-        toast.success("Login successful");
+        toast.success("Login Successfully");
         navigate("/");
         storeTokenInLS(res_data.token);
       } else {

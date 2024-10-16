@@ -10,11 +10,11 @@ const Signup = () => {
     email:"",
     password:"",
 });
-
+ 
 
 const {storeTokenInLS} = useAuth();
 
-const userURL = "https://food-delivery-app-xi-rust.vercel.app/api/auth/signup";
+const userURL = "http://localhost:2000/api/auth/signup";
 
 const handleInput = (e) =>{
     console.log(e);
@@ -47,7 +47,7 @@ const handleSubmit = async (e) => {
 
     if(response.ok) {
         navigate("/")
-        toast.success("Register succesfully")
+        toast.success("Register Succesfully")
         setUser ({ username : "",email : "",password : "" });
         storeTokenInLS(res_data.token);
     } else {

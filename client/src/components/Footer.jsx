@@ -28,8 +28,8 @@ const Footer = () => {
 
           <div className="getintouch text-white w-full lg:w-auto lg:text-left">
             <h1 className="text-xl md:text-3xl">Get in Touch</h1>
-            <p className="mt-3">+1-212-456-7890</p>
-            <p>contact@tomato.com</p>
+            <p className="mt-3">+91-9565816707</p>
+            <p>contact@deepak.com</p>
           </div>
         </div>
       </div>
