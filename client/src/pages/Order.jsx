@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
 import { storeContext } from "../context/StoreContext";
+import { useAuth } from "../../Store/authStore";
 
 const Cart = () => {
   const { isLoggedIn } = useAuth();
   const { getTotalCartAmount } = useContext(storeContext);
-  const navigate = useNavigate();
+
 
   const loginPay = async () => {
     toast.error("Making Payment You Have to Signup First");
   } 
 
-  const ORDER = "https://food-delivery-app-xi-rust.vercel.app/order"
+  const ORDER = "http://localhost:2000/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();
@@ -48,18 +49,18 @@ const Cart = () => {
          
             
             // Make sure to send cart data, user ID, and other order details
-            await fetch("http://localhost:2000/api/auth/myorder", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    orderId: order.id,
-                    items: cartItem, // Send cart items (if cartItem is available)
-                    totalAmount: amount,
-                    userId: userId, // Ensure you have the correct userId
-                }),
-            });
+            // await fetch("http://localhost:2000/api/auth/myorder", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         orderId: order.id,
+            //         items: cartItem, // Send cart items (if cartItem is available)
+            //         totalAmount: amount,
+            //         userId: userId, // Ensure you have the correct userId
+            //     }),
+            // });
         
            
         
