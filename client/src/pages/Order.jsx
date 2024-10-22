@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { storeContext } from "../context/StoreContext";
 import { useAuth } from "../../Store/authStore";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const { isLoggedIn } = useAuth();
