@@ -7,7 +7,7 @@ const cors = require("cors");
 const Razorpay = require("razorpay");
 
 const corsOptions = {
-    origin: "https://tomato-food-delivery-app-one.vercel.app",
+    origin: "http://tomato-food-delivery-app-one.vercel.app",
     methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
     credentials: true,
 };
