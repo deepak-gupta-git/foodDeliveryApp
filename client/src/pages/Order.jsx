@@ -11,7 +11,7 @@ const Cart = () => {
     toast.error("Making Payment You Have to Signup First");
   } 
 
-  const ORDER = "http://localhost:2000/order"
+  const ORDER = "food-delivery-app-tgyc.vercel.app/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();
