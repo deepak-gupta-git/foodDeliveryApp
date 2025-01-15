@@ -15,7 +15,7 @@ const Signup = () => {
 const {storeTokenInLS} = useAuth();
 
 
-const userURL = "​https://food-delivery-app-tgyc.vercel.app/signup";
+const userURL = "http://localhost:2000/api/auth/signup";
 
 const handleInput = (e) =>{
     console.log(e);
@@ -48,7 +48,7 @@ const handleSubmit = async (e) => {
 
     if(response.ok) {
         navigate("/")
-        toast.success("Register Succesfully")
+        toast.success("Signed up Succesfully!")
         setUser ({ username : "",email : "",password : "" });
         storeTokenInLS(res_data.token);
     } else {
@@ -66,7 +66,7 @@ const handleSubmit = async (e) => {
     <div className='mt-[6rem] w-[60%] m-auto'>
       
       <form action="" className='flex justify-center flex-col gap-4 ' onSubmit={handleSubmit}>
-      <h1 className='text-2xl md:text-4xl text-orange-600 '>Signup on Tomato</h1>
+      <h1 className='text-2xl md:text-4xl text-orange-600 '>Signup on Delicious-Bytes</h1>
       <label htmlFor="username">username</label>
       <input placeholder='enter username' className='p-3 border rounded-md' 
         name="username"

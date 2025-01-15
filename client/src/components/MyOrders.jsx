@@ -21,14 +21,16 @@ const Cart = () => {
     return (
         <div className='w-[80%] m-auto'>
             {isCartEmpty ? (
-                <div className='text-center mt-[16rem]'>
+                
+                <div className='text-center mt-[14rem]'>
+                    <h1 className='text-6xl'>Oops!</h1>
                     <h2 className='text-5xl'>You do not order Anything</h2>
-                    <p className='mt-2 text-xl'>Order some items to get started!</p>
+                    <p className='mt-2 text-2xl'>Order some items to get started!</p>
                 </div>
             ) : (
                 <>
-                <h1 className='mt-[6rem] text-4xl'>Your Orders</h1>
-                    <div className="cart_lists mt-[6rem] flex justify-between">
+                <h1 className='mt-[7rem] text-4xl'>Your Orders</h1>
+                    <div className="cart_lists mt-[2rem] flex justify-between">
                         <h2 className="flex-1">Items</h2>
                         <h2 className="flex-1">Title</h2>
                         <h2 className="flex-1">Price</h2>

@@ -12,7 +12,7 @@ const Login = () => {
 
   const {storeTokenInLS} = useAuth();
 
-  const LOGINURL = "​https://food-delivery-app-tgyc.vercel.app/login"
+  const LOGINURL = "http://localhost:2000/api/auth/login"
   
 
   const handleInput = (e) => {
@@ -46,7 +46,7 @@ const Login = () => {
         // alert("user Successful");
         // storeTokenInLS(res_data.token);
         setUser({ email: "", password: "" });
-        toast.success("Login Successfully");
+        toast.success("Logged in Successfully!");
         navigate("/");
         storeTokenInLS(res_data.token);
       } else {
@@ -64,7 +64,7 @@ const Login = () => {
     <div>
        <div className='mt-[7rem] w-[60%] m-auto'>
       <form action="" className='flex justify-center flex-col gap-4' onSubmit={handleSubmit}>
-      <h1 className='text-2xl md:text-4xl text-orange-500'>Hello From Login</h1>
+      <h1 className='text-2xl md:text-4xl text-orange-500'>Login on Delicious-Bytes</h1>
 
       <label htmlFor="email">email</label>
       <input type="email" placeholder='enter your email' className='p-3 border rounded-md'

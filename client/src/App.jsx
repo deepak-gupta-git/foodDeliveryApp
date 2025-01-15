@@ -12,10 +12,12 @@ import {AuthProvider} from "../Store/authStore"
 import { Logout } from './pages/Logout';
 import FeedBack from './components/FeedBack';
 import MyOrders from './components/MyOrders';
+import StoreContextProvider from './context/StoreContext';
 
 const App = () => {
   return (
   <>
+  <StoreContextProvider>
   <AuthProvider>
     <Navbar/>
     <Routes>
@@ -31,6 +33,7 @@ const App = () => {
     </Routes>
     <Footer/>
     </AuthProvider>
+    </StoreContextProvider>
   </>
   )
 };

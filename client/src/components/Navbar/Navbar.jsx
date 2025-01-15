@@ -9,7 +9,7 @@ const Navbar = () => {
   const { isLoggedIn } = useAuth();
 
   const Onclick = async () => {
-    toast.success("Logout Succesfully");
+    toast.success("Logged Out Succesfully!");
   } 
   return (
  
@@ -18,26 +18,32 @@ const Navbar = () => {
           <label htmlFor="check" className='checkbtn'>&#9776;</label>
           <input type="checkbox"  id='check'/>
           <div className='logo_sections'>
-            <NavLink to="/">  <label className='logo cursor-pointer'>explore</label></NavLink>
+            <NavLink to="/">  <label className='logo cursor-pointer text-2xl'>Delicious-Bytes</label></NavLink>
           </div>
           <ul>
             <NavLink to="/"><li>home</li></NavLink>
             <a href="#explore"><li>menu</li></a>
             <a href="#food_display"><li>explore-food</li></a>
             <a href="#footer"><li>contact us</li></a>
-            <NavLink to="/myorders"><a><li>my orders</li></a></NavLink>
+            {
+              isLoggedIn && (
+                <NavLink to="/myorders"><a><li>my orders</li></a></NavLink>
+              )
+            }
+            
           </ul>
 
           <div className='searchBar'> 
           <div class="navbar-nav nav-search ms-auto">
 
-          <div className="icons">
+          <div className="icons ">
           <img src={assets.search_icon} alt="" />
-           <NavLink to="/cart"> <img src={assets.basket_icon} alt="" /></NavLink>
+           <NavLink to="/cart"> <img className='dot' src={assets.basket_icon} /></NavLink>
 
            {
             isLoggedIn ? (
                   <NavLink to="/logout"><button onClick={Onclick} class="btn btn-search form-btn" type="submit">Logout</button></NavLink>
+                  
             ) : (
                  <NavLink to="/signup"><button class="btn btn-search form-btn" type="submit">sign up</button></NavLink>
             )

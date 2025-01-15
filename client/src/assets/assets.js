@@ -187,7 +187,7 @@ export const menu_list = [
             image: food_9,
             price: 51,
             description: "Creamy ice cream swirled with chocolate and vanilla flavors, perfect for a sweet treat.",
-            category: "Desserts"
+            category: "Deserts"
         }, 
         {
             _id: "10",
@@ -195,7 +195,7 @@ export const menu_list = [
             image: food_10,
             price: 59,
             description: "Delightful ice cream made with real fruit pieces, offering a refreshing taste in every scoop.",
-            category: "Desserts"
+            category: "Deserts"
         }, 
         {
             _id: "11",
@@ -203,7 +203,7 @@ export const menu_list = [
             image: food_11,
             price: 55,
             description: "Ice cream served in a jar with layered flavors, a fun way to enjoy your dessert.",
-            category: "Desserts"
+            category: "Deserts"
         }, 
         {
             _id: "12",
@@ -211,7 +211,7 @@ export const menu_list = [
             image: food_12,
             price: 50,
             description: "Classic vanilla ice cream made with real vanilla beans for a rich and creamy experience.",
-            category: "Desserts"
+            category: "Deserts"
         },
         {
             _id: "13",

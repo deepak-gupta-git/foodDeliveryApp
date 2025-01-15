@@ -7,7 +7,7 @@ export const Logout = () => {
 
   const { LogoutUser } = useAuth();
 
-  useEffect(() => {
+  useEffect(() => {+
     LogoutUser();
   }, [LogoutUser]);
 

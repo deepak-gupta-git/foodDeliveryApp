@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { menu_list } from '../assets/assets'
+const Explore = ({category, setCategory}) => {
 
-const Explore = () => {
   return (
     <div className='w-[80%] sm:w-[80%] m-auto mt-[2rem]'  id='explore'>
       <h1 className='text-2xl sm:text-3xl lg:text-5xl mt-3'>Explore our menu</h1>
@@ -12,8 +12,11 @@ const Explore = () => {
         {
           menu_list.map((item, index) => {
             return (
-              <div key={index} className='w-[90px] sm:w-[110px]'>
-                <img className='cursor-pointer w-full' src={item.menu_image} alt={item.menu_name} />
+              <div
+              onClick={() =>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)}
+              key={index} className='w-[80px] sm:w-[110px] hover:scale-105 transition-transform duration-300'>
+            
+                <img  className={`cursor-pointer ${category === item.menu_name ? "active" : ""}`} src={item.menu_image} alt={item.menu_name} />
                 <p className='text-sm sm:text-base'>{item.menu_name}</p>
               </div>
             )

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { storeContext } from "../context/StoreContext";
 import { useAuth } from "../../Store/authStore";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { isLoggedIn } = useAuth();
@@ -11,8 +12,9 @@ const Cart = () => {
   const loginPay = async () => {
     toast.error("Making Payment You Have to Signup First");
   } 
+  const navigate = useNavigate();
 
-  const ORDER = "​https://food-delivery-app-tgyc.vercel.app/order"
+  const ORDER = "http://localhost:2000/order"
 
   const paymentHandler = async (event) => {
     event.preventDefault();
@@ -47,23 +49,10 @@ const Cart = () => {
         order_id: order.id, // Order ID from your backend
         handler: async function (response) {
           console.log(response);
+        toast.success("Order Confirmed Successfully!");
+        navigate("/myorders"); 
          
             
-            // Make sure to send cart data, user ID, and other order details
-            // await fetch("http://localhost:2000/api/auth/myorder", {
-            //     method: "POST",
-            //     headers: {
-            //         "Content-Type": "application/json",
-            //     },
-            //     body: JSON.stringify({
-            //         orderId: order.id,
-            //         items: cartItem, // Send cart items (if cartItem is available)
-            //         totalAmount: amount,
-            //         userId: userId, // Ensure you have the correct userId
-            //     }),
-            // });
-        
-           
         
         },
         prefill: {

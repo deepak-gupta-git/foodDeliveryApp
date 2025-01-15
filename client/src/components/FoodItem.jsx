@@ -1,14 +1,12 @@
 import React, { useContext} from 'react';
 import { assets } from "../assets/assets";
 import { storeContext } from '../context/StoreContext';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 
 const FoodItem = ({ id, name, price, description, image }) => {
-
-    const [itemCount, setItemCount] = useState(0)
-    const {cartItem, addToCart, removeCart} = useContext(storeContext);
+  const { cartItem, addToCart, removeCart } = useContext(storeContext);
 
   return (
     <div className="food_item border p-4 rounded-lg shadow-md">
@@ -16,7 +14,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
         <img src={image} alt={name} className="object-cover rounded" />
         { !cartItem[id] 
         ?<img className='w-[40px] absolute cursor-pointer bottom-[20px] right-[45px] rounded-md' onClick={() =>addToCart(id)} src={assets.add_icon_white}/>
-        :<div className=' absolute bottom-[20px] right-[45px] flex items-center rounded-3xl gap-3 bg-white'>
+        :<div className=' absolute bottom-[20px] right-[45px] flex items-center rounded-3xl gap-3 bg-white cursor-pointer'>
             <img onClick={() =>removeCart(id)} src={assets.remove_icon_red} alt="" />
            <p>{cartItem[id]}</p>
            <img onClick={() =>addToCart(id)} src={assets.add_icon_green} alt="" />

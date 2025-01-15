@@ -17,6 +17,7 @@
     justify-content: space-between;
     width: 80%;
     margin: auto;
+    /* border: black; */
 }
 
 .logo_sections {
@@ -26,6 +27,8 @@
 
 .logo {
     margin: 0 20px;
+    color: tomato;
+    font-weight: bold;
 }
 
 .form-input {
@@ -35,6 +38,7 @@
     padding: 15px;
     border: 0.5px solid rgb(199, 195, 195);
 }
+
 
 .form-btn {
     height: 2.2rem;
