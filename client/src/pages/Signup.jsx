@@ -15,11 +15,8 @@ const Signup = () => {
 const {storeTokenInLS} = useAuth();
 
 
-<<<<<<< HEAD
-const userURL = "http://localhost:2000/api/auth/signup";
-=======
+
 const userURL = "https://food-delivery-app-tgyc.vercel.app/api/auth/signup";
->>>>>>> 41ef645b7683c1449c648b566edd24b049509e45
 
 const handleInput = (e) =>{
     console.log(e);
