@@ -14,7 +14,11 @@ const Cart = () => {
   } 
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   const ORDER = "http://localhost:2000/order"
+=======
+  const ORDER = "https://food-delivery-app-tgyc.vercel.app/order";
+>>>>>>> 41ef645b7683c1449c648b566edd24b049509e45
 
   const paymentHandler = async (event) => {
     event.preventDefault();
